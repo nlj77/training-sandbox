@@ -1,0 +1,1 @@
+this is a test to see if my classes and their methods can take a txt file, read it into a string, and then write it to a new file with all capital letters.
