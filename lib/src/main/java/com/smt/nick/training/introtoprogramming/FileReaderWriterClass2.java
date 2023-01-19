@@ -1,12 +1,7 @@
 package com.smt.nick.training.introtoprogramming;
 
-import java.io.FileWriter;
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -47,7 +42,7 @@ public class FileReaderWriterClass2 {
 
 		myFRW.setFileNameInput(INPUT);
 		myFRW.setFileNameOutput(OUTPUT);
-		fileStringToUpper(TESTDATA, myFRW);
+		fileStringToUpper(myFRW);
 
 	}
 
@@ -58,8 +53,8 @@ public class FileReaderWriterClass2 {
 	 * @throws FileNotFoundException incase output.txt, input.txt, or outputdata.txt is missing
 	 * @throws IOException,again just as practice to get used to tracking down errors
 	 */
-	public static void fileStringToUpper(String outputData, FileReaderWriter frw)
-			throws FileNotFoundException, IOException {
+	public static void fileStringToUpper(FileReaderWriter frw)
+			throws IOException {
 		FileReaderWriter myFRW = frw;
 		try (BufferedReader br = new BufferedReader(new FileReader(INPUT))) {
 			String line;

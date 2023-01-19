@@ -13,7 +13,7 @@ import lombok.Data;
 /****************************************************************************
  * <b>Title:</b> ReaderWriterExercise1.java<br>
  * <b>Project:</b> lib<br>
- * <b>Description:</b> <br>
+ * <b>Description:</b> This is class one of  <br>
  * <b>Copyright:</b> Copyright (c) 2023<br>
  * <b>Company:</b> Silicon Mountain Technologies<br>
  * 

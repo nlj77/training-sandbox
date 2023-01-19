@@ -47,7 +47,7 @@ public class Language {
 	 * Creates a english HashMap for use in the langPack map of maps.
 	 * This Map holds options for default greetings, win conditions, player names, and playing again questions
 	 */
-	public static Map<String, String> englishPack = new HashMap<>();
+	public static final Map<String, String> englishPack = new HashMap<>();
 	static {
 		englishPack.put(GREETING, "Hello and welcome to the Guessing Game!!");
 		englishPack.put(PLAYERNAME, "What is your name?");
@@ -63,7 +63,7 @@ public class Language {
 	 * The intent is the game can set a user's default language, 'En' for example, then cycle through the English map
 	 * for usable responses. This is intended to be expandable. 
 	 */
-	public static Map<String,Map<String, String>> langPack=new HashMap<>();
+	public static final Map<String,Map<String, String>> langPack=new HashMap<>();
 	static {
 		langPack.put(ENGLISH, englishPack);
 		langPack.put("Es", englishPack);
