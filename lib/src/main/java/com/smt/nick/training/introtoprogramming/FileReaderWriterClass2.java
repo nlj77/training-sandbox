@@ -59,7 +59,7 @@ public class FileReaderWriterClass2 {
 		try (BufferedReader br = new BufferedReader(new FileReader(INPUT))) {
 			String line;
 
-			while ((line = br.readLine()) != null) {
+			if ((line = br.readLine()) != null) {
 				char[] chars = line.toCharArray();
 				for (int r = 0; r < chars.length; r++) {
 					/**

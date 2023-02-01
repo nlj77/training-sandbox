@@ -47,14 +47,20 @@ public class FileReaderWriter {
 	 */
 	public void writeFile(char[] chars) throws IOException {
 		FileWriter writer = new FileWriter(fileNameOutput);
-		BufferedWriter buffer = new BufferedWriter(writer);
-		try {
+		try (BufferedWriter buffer = new BufferedWriter(writer)){
 			buffer.write(chars);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		buffer.close();
 	}
-
+	}
+	/**
+	 * 
+	 * @param string this is whatever string read in object that can be used to write to a new file
+	 * @param outputFileName selected output location
+	 * @throws IOException test if try with resources doesn't work
+	 */
+	public void writeFile(StringBuilder data, String outputFileName) throws IOException {
+		String stringData = data.toString();
+		try (FileWriter writer = new FileWriter(fileNameOutput); BufferedWriter buffer = new BufferedWriter(writer)) {
+			buffer.write(stringData);
+		}
+	}
 }
